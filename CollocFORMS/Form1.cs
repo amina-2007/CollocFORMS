@@ -28,14 +28,7 @@ namespace CollocFORMS
         private void UpdateDataGrid()
         { 
             dataGridRasp.Rows.Clear(); 
-            if (dataGridRasp.Columns.Count == 0)
-            {
-                dataGridRasp.Columns.Add("Предмет", "Предмет");
-                dataGridRasp.Columns.Add("Пара", "Пара");
-                dataGridRasp.Columns.Add("День", "День");
-                dataGridRasp.Columns.Add("Неделя", "Неделя");
-                dataGridRasp.Columns.Add("Группа", "Группа");
-            }
+           
              
             foreach (var lesson in schedule.listLessons)
             {
@@ -45,7 +38,7 @@ namespace CollocFORMS
                     lesson.weekDay.ToString(),
                     lesson.weekNumber,
                     lesson.groupNumber
-                );
+                ); 
             }
         }
         private void UpdateLabels()
