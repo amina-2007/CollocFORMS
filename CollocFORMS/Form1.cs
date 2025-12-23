@@ -77,5 +77,50 @@ namespace CollocFORMS
 
             label2.Text = $"Всего пар: {schedule.listLessons.Count}";
         }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (dataGridRasp.SelectedRows.Count > 0)
+            {
+                int index = dataGridRasp.SelectedRows[0].Index;
+                if (index < schedule.listLessons.Count)
+                {
+                    schedule.listLessons.RemoveAt(index);
+                    dataGridRasp.Rows.RemoveAt(index);
+                    label2.Text = $"Всего пар: {schedule.listLessons.Count}";
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            schedule.listLessons = schedule.listLessons
+      .OrderBy(lesson => lesson.weekDay)
+      .ThenBy(lesson => lesson.number)
+      .ToList();
+
+            UpdateDataGrid();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            schedule.listLessons = schedule.listLessons
+       .OrderBy(lesson => lesson.groupNumber)
+       .ThenBy(lesson => lesson.number)
+       .ToList();
+
+            UpdateDataGrid();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            schedule.listLessons = schedule.listLessons
+      .OrderBy(lesson => lesson.weekNumber)
+      .ThenBy(lesson => lesson.weekDay)
+      .ThenBy(lesson => lesson.number)
+      .ToList();
+
+            UpdateDataGrid();
+        }
     }
 }

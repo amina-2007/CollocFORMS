@@ -125,6 +125,7 @@ namespace CollocFORMS
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "УДАЛИТЬ";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // button3
             // 
@@ -143,6 +144,7 @@ namespace CollocFORMS
             this.button4.TabIndex = 5;
             this.button4.Text = "ПО НЕДЕЛЯМ";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -152,6 +154,7 @@ namespace CollocFORMS
             this.button5.TabIndex = 6;
             this.button5.Text = "ПО ДНЮ";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -161,6 +164,7 @@ namespace CollocFORMS
             this.button6.TabIndex = 7;
             this.button6.Text = "ПО ГРУППАМ";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
